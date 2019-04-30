@@ -1,0 +1,18 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+
+file=open('xorData.txt','r')
+data=np.loadtxt(file,dtype=float, delimiter=' ')
+print(data)
+for i in range(len(data)):
+
+    if data[i,2]==1:
+        plt.scatter(data[i,0],data[i,1],color='red')
+    else:
+        plt.scatter(data[i, 0], data[i, 1], color='blue')
+
+plt.title('XOR PROBLEM')
+plt.xlabel('x2')
+plt.ylabel('x1')
+plt.show()
